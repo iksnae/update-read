@@ -13,10 +13,12 @@ export async function readValue(key: string, bucket: string = "my-bucket") {
         // process data.
         console.log("successfully fetched data")
         console.log(data)
+        return String(data.Body)
     } catch (error) {
         // error handling.
         console.log("failed to fetch data")
         console.error(error)
+        return null
     } finally {
         // finally.
         console.info('finished')
