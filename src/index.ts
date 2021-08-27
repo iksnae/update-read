@@ -10,10 +10,10 @@ export async function readValue(key: string, bucket: string = "my-bucket") {
     const command = new GetObjectCommand(params)
     try {
         const data = await client.send(command)
-        // process data.
+        // process data.        
         console.log("successfully fetched data")
         console.log(data)
-        return String(data.Body)
+        return data.Body.toString()
     } catch (error) {
         // error handling.
         console.log("failed to fetch data")
