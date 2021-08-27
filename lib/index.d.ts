@@ -1,2 +1,2 @@
-export declare function add(a: number, b: number): number;
+export declare function readValue(key: string, bucket?: string): Promise<void>;
 //# sourceMappingURL=index.d.ts.map
